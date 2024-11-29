@@ -18,5 +18,10 @@ public class Test {
         Pavvada pavvada = (Pavvada) context.getBean("p1");
         System.out.println(pavvada);
 
+        System.out.println("==============Example=======================");
+        Example ex = (Example) context.getBean("example");
+        System.out.println(ex);
+
+
     }
 }

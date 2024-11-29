@@ -6,6 +6,8 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
     <!--  this is our beans -->
     <bean class="com.springcore.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
         <property name="price" value="10" />
@@ -13,5 +15,8 @@
 
     <bean class="com.springcore.lifecycle.Pavvada" name="p1" >
         <property name="price" value="10" />
+    </bean>
+    <bean class="com.springcore.lifecycle.Example" name="example">
+        <property name="subject" value="Maths" />
     </bean>
 </beans>
