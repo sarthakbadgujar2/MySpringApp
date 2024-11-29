@@ -13,8 +13,10 @@ public class Test {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("ciSamosaConfig.xml");
         Samosa samosa = (Samosa) context.getBean("s1");
         System.out.println(samosa);
-
+        System.out.println("================================================");
         context.registerShutdownHook();
+        Pavvada pavvada = (Pavvada) context.getBean("p1");
+        System.out.println(pavvada);
 
     }
 }

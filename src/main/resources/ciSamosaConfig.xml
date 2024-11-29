@@ -10,4 +10,8 @@
     <bean class="com.springcore.lifecycle.Samosa" name="s1" init-method="init" destroy-method="destroy">
         <property name="price" value="10" />
     </bean>
+
+    <bean class="com.springcore.lifecycle.Pavvada" name="p1" >
+        <property name="price" value="10" />
+    </bean>
 </beans>
