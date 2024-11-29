@@ -11,6 +11,8 @@ public class Test {
         Person person = (Person) context.getBean("person");
         System.out.println(person);
 
+        Addition addd = (Addition) context.getBean("add");
+        addd.doSum();
         // Add any additional logic for using the context (e.g., retrieving beans)
 
 

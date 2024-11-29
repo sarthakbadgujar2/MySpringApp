@@ -12,4 +12,9 @@
         <constructor-arg value="123" type="int" />
 
     </bean>
+
+    <bean class="com.springcore.ci.Addition" name="add">
+        <constructor-arg value="12" type="int" index="1"/>
+        <constructor-arg value="34" type="int" index="0"/>
+    </bean>
 </beans>
