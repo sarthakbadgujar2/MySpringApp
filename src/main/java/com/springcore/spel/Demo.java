@@ -11,6 +11,30 @@ public class Demo {
     @Value("#{1+1+2+3*5}")
     private int y;
 
+    @Value("#{T(java.lang.Math).sqrt(25)}")
+    private double z;
+
+    @Value("#{T(java.lang.Math).E}")
+    private double e;
+
+    @Value("#{ new java.lang.String('Sarthak') }")
+    private String name;
+    public double getE() {
+        return e;
+    }
+
+    public void setE(double e) {
+        this.e = e;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
     public int getX() {
         return x;
     }
@@ -32,6 +56,9 @@ public class Demo {
         return "Demo{" +
                 "x=" + x +
                 ", y=" + y +
+                ", z=" + z +
+                ", e=" + e +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
