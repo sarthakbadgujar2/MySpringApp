@@ -17,15 +17,14 @@
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>5.2.3.RELEASE</version>
+            <artifactId>spring-context</artifactId>
+            <version>6.1.2</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <!-- Spring Core (Spring 6.x) -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.2.3.RELEASE</version>
+            <artifactId>spring-core</artifactId>
+            <version>6.1.2</version>
         </dependency>
 
         <dependency>
