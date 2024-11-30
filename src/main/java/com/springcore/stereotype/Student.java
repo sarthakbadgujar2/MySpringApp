@@ -14,7 +14,7 @@ public class Student {
     @Value("Nashik")
     private String city;
 
-    @Value("#{address}")
+    @Value("#{address}") // this is Spring expression language
     private List<String> address;
 
     public List<String> getAddress() {
