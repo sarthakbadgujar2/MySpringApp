@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--    Standalone List -->
+
+    <util:list list-class="java.util.LinkedList" id="myFriendList1">
+        <value>friend 1</value>
+        <value>friend 2</value>
+        <value>friend 3</value>
+    </util:list>
+
+    <util:list list-class="java.util.Vector" id="myFriendList">
+        <value>friend 1</value>
+        <value>friend 2</value>
+        <value>friend 3</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="myFeesStructure">
+        <entry key="Java" value="2000"/>
+        <entry key="Java-Spring" value="10000"/>
+        <entry key="Python-Django" value="5000"/>
+    </util:map>
+
+<!--    Standalone properties -->
+    <util:properties id="properties">
+        <prop key="driver">com.mysql.jdbc.driver</prop>
+        <prop key="connString">com.mysql.jdbc.driver</prop>
+        <prop key="host">0.0.0.0</prop>
+        <prop key="pass">weakpass</prop>
+    </util:properties>
+
+
+    <bean class="com.springcore.standalone.collections.Person" name="person">
+
+<!--        <property name="friends">-->
+<!--            <ref bean="myFriendList" />-->
+<!--        </property>-->
+
+        <property name="friends" ref="myFriendList" />
+        <property name="feesStructure" ref="myFeesStructure" />
+        <property name="prop" ref="properties" />
+    </bean>
+</beans>
