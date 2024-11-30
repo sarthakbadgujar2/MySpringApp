@@ -13,5 +13,15 @@ public class Test {
         System.out.println(s);
         System.out.println(s.getAddress());
         System.out.println(s.getAddress().getClass().getName());
+
+        // Singleton object return by spring as same hash code is getting printed for both objects
+        System.out.println(s.hashCode());
+        Student s1 = context.getBean("student",Student.class);
+        System.out.println(s1.hashCode());
+
+        Teacher t = context.getBean("teacher",Teacher.class);
+        System.out.println(t.hashCode());
+        Teacher t1 = context.getBean("teacher",Teacher.class);
+        System.out.println(t1.hashCode());
     }
 }

@@ -17,5 +17,7 @@
     </util:list>
 
     <context:component-scan base-package="com.springcore.stereotype" />
+    <bean class="com.springcore.stereotype.Teacher" name="teacher" scope="prototype">
+    </bean>
 
 </beans>
