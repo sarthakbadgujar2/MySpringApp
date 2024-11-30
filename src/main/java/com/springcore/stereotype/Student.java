@@ -3,12 +3,25 @@ package com.springcore.stereotype;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component("student")
 public class Student {
     @Value("Sarthak")
     private String name;
     @Value("Nashik")
     private String city;
+
+    @Value("#{address}")
+    private List<String> address;
+
+    public List<String> getAddress() {
+        return address;
+    }
+
+    public void setAddress(List<String> address) {
+        this.address = address;
+    }
 
     public String getCity() {
         return city;
