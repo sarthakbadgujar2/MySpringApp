@@ -19,6 +19,10 @@ public class Demo {
 
     @Value("#{ new java.lang.String('Sarthak') }")
     private String name;
+
+    @Value("#{ 8>2 }")
+    private boolean isActive;
+
     public double getE() {
         return e;
     }
@@ -59,6 +63,7 @@ public class Demo {
                 ", z=" + z +
                 ", e=" + e +
                 ", name='" + name + '\'' +
+                ", isActive=" + isActive +
                 '}';
     }
 }
