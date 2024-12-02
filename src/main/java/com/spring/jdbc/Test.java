@@ -23,18 +23,22 @@ public class Test {
 //        System.out.println("Studnet added " + result);
 
         // Update record into database
-        Student s1 = new Student();
-        s1.setName("Sarthak Updated");
-        s1.setCity("Amalner");
-        s1.setId(333);
-        int result = studentDao.update(s1);
-        System.out.println("Data changed "+ result);
+//        Student s1 = new Student();
+//        s1.setName("Sarthak Updated");
+//        s1.setCity("Amalner");
+//        s1.setId(333);
+//        int result = studentDao.update(s1);
+//        System.out.println("Data changed "+ result);
 
         // Delete record from database
 
-        Student s2= new Student();
-        s2.setId(333);
-        int res = studentDao.delete(s2.getId());
-        System.out.println("Student record delete from DB"+res);
+//        Student s2= new Student();
+//        s2.setId(333);
+//        int res = studentDao.delete(s2.getId());
+//        System.out.println("Student record delete from DB"+res);
+
+        // Get the single student from database
+        Student student = studentDao.getStudent(444);
+        System.out.println(student);
     }
 }
