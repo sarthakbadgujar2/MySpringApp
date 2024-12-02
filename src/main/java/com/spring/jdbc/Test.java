@@ -4,6 +4,7 @@ import com.spring.jdbc.dao.StudentDao;
 import com.spring.jdbc.dao.StudentDaoImpl;
 import com.spring.jdbc.entities.Student;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -13,7 +14,12 @@ public class Test {
         System.out.println("Hello world learning JDBC");
         // JdbcTemplate Object
 
-        ApplicationContext con = new ClassPathXmlApplicationContext("springjdbcConfig.xml");
+        // Follwoing line is for the configuration with XML
+//        ApplicationContext con = new ClassPathXmlApplicationContext("springjdbcConfig.xml");
+
+        // Following line is for the configuration without XML
+        ApplicationContext con = new AnnotationConfigApplicationContext(JdbcConfig.class);
+
         StudentDao studentDao = con.getBean("studentDao", StudentDao.class);
 
         // Insert student into database
