@@ -1,9 +1,12 @@
 package com.spring.jdbc;
 
 import com.spring.jdbc.dao.StudentDao;
+import com.spring.jdbc.dao.StudentDaoImpl;
 import com.spring.jdbc.entities.Student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
@@ -40,5 +43,9 @@ public class Test {
         // Get the single student from database
         Student student = studentDao.getStudent(444);
         System.out.println(student);
+
+        // Get All students
+        List<Student> students = studentDao.getAllStudent();
+        System.out.println(students);
     }
 }
