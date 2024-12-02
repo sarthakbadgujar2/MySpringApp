@@ -30,7 +30,11 @@ public class Test {
         int result = studentDao.update(s1);
         System.out.println("Data changed "+ result);
 
+        // Delete record from database
 
-
+        Student s2= new Student();
+        s2.setId(333);
+        int res = studentDao.delete(s2.getId());
+        System.out.println("Student record delete from DB"+res);
     }
 }
