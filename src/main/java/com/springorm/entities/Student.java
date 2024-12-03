@@ -6,26 +6,31 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="student_details")
+@Table(name = "student_details")
 public class Student {
 
     @Id
-    @Column(name="student_id")
+    @Column(name = "student_id")
     private int studentId;
 
     @Column(name = "student_name")
     private String studentName;
 
-
-    @Column(name="student_city")
+    @Column(name = "student_city")
     private String studentCity;
 
+    // No-argument constructor
+    public Student() {
+    }
+
+    // Constructor with parameters
     public Student(int studentId, String studentName, String studentCity) {
         this.studentId = studentId;
         this.studentName = studentName;
         this.studentCity = studentCity;
     }
 
+    // Getter and Setter methods
     public int getStudentId() {
         return studentId;
     }
@@ -48,5 +53,14 @@ public class Student {
 
     public void setStudentCity(String studentCity) {
         this.studentCity = studentCity;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", studentName='" + studentName + '\'' +
+                ", studentCity='" + studentCity + '\'' +
+                '}';
     }
 }
